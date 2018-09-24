@@ -3,7 +3,7 @@ FROM golang:1.11.0-alpine AS builder
 
 ADD . /go/src/github.com/LinAnt/outyet
 WORKDIR /go/src/github.com/LinAnt/outyet
-RUN go build .
+RUN go install .
 
 # final stage
 FROM alpine:3.7
